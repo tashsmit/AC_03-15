@@ -6,9 +6,9 @@ package nyc.c4q.tashsmit;
 import java.util.Scanner;
 public class StringStuff {
 
-    /*public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         String someStr;
         String someChar;
 
@@ -17,9 +17,11 @@ public class StringStuff {
         System.out.println("Enter a character: ");
         someChar = input.nextLine();
         char charVar = someChar.charAt(0);
-        charCount(someStr, charVar);
+        charCount(someStr, charVar);*/
 
-    }*/
+        pad("abc", 10, '*');
+
+    }
 
 
     public static void printReverse(String text) {
@@ -33,18 +35,18 @@ public class StringStuff {
 
         int wordCount = 0;
 
-        for (int i = 0; i < text.length(); i++ ) {
+        for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == letter) {
                 wordCount++;
             } else
                 continue;
         }
 
-            System.out.println(wordCount);
+        System.out.println(wordCount);
 
-        }
+    }
 
-    public static void main(String[] args){
+    /*public static void main(String[] args){
 
         String text = "Hello, World!";
 
@@ -56,12 +58,31 @@ public class StringStuff {
 
             System.out.print(text.charAt(i));
             System.out.print(text.charAt(i - 1));
+        }
+    }*/
 
+    public static void Underline(String text) {
+
+        System.out.println(text);
+
+        for (int i = 0; i < text.length(); i++) {
+            System.out.print("=");
+        }
+
+    }
+
+    public static void pad(String text, int length, char padChar) {
+
+        int difference = length - text.length();
+
+        System.out.print(text);
+
+        for (int i = 0; i < difference; i++) {
+
+            System.out.print(padChar);
 
         }
 
 
-
     }
-
-    }
+}
