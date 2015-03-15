@@ -17,7 +17,6 @@ public class StringBox {
         }
 
         System.out.println(startEnd + "-+");
-
         System.out.println("| " + text + " |");
 
         System.out.print(startEnd + "-+");

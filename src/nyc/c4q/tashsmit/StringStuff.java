@@ -19,7 +19,8 @@ public class StringStuff {
         char charVar = someChar.charAt(0);
         charCount(someStr, charVar);*/
 
-        pad("abc", 10, '*');
+        //pad("Tasha Smith",20, '&');
+        System.out.println(printTriangles("Hello!"));
 
     }
 
@@ -65,7 +66,7 @@ public class StringStuff {
 
         System.out.println(text);
 
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 0; i < text.length(); ++i) {
             System.out.print("=");
         }
 
@@ -83,6 +84,32 @@ public class StringStuff {
 
         }
 
+    }
+
+    public static String substring(String text, int start, int end) {
+
+        String result = "";
+        for (int i = start; i < end; ++i) {
+            result += text.charAt(i);
+        }
+        return result;
 
     }
+
+    public static String substring(String text, int start) {
+        return substring(text, start, text.length());
+
+
+    }
+
+    public static String printTriangles(String text) {
+
+        String triangle = "";
+
+        for (int i = 1; i <= text.length(); i++) {
+            triangle = text.substring(0, i);
+        }
+        return triangle;
+    }
 }
+
